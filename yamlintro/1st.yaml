@@ -1,0 +1,13 @@
+---
+- name: Our first playbook
+  hosts: ourhosts
+
+  tasks: 
+  - name: Copy a file to everybody
+    copy: 
+      src: mytext.txt
+      dest: mytext.txt
+
+
+
+...

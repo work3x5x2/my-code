@@ -1,0 +1,9 @@
+---
+- name: Alta3 Reasearch
+  hosts: all
+  apps:
+    - htop
+    - sshd
+    - iptables
+
+...      
