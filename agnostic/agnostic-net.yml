@@ -1,0 +1,20 @@
+---
+  - name: agnostic
+    hosts: all
+    gather_facts: false
+    vars:
+      ansible_connection: network_cli
+      ansible_network_os: eos
+      ansible_become: yes
+      ansible_become_method: enable
+      ansible_user: admin
+      ansible_ssh_pass: alta3
+    tasks:
+      - name: run this 
+        cli_command:
+          command: show version
+        register: results
+      
+      - name: print it
+        debug:
+          var: results
